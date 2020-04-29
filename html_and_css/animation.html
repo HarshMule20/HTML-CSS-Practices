@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* display: flex; */
+            background-color: yellow;
+        }
+
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: XYZ;
+            animation-duration: 0.7s;
+            animation-iteration-count: 2;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes XYZ {
+            from {
+                width: 200px;
+
+            }
+
+            to {
+                width: 1400px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is BOX
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Selectors</title>
+    <style>
+        .container{
+            display: inline-block;
+            margin: auto;
+            width: 233px
+        }
+        input{
+            display: block;
+        }
+        input[type='text']{
+            padding: 6px;
+            border: 2px solid red;
+        }
+        li:nth-child(2n-1){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter Password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">Item1</li>
+            <li class="item" id="item2">Item2</li>
+            <li class="item" id="item3">Item3</li>
+            <li class="item" id="item4">Item4</li>
+            <li class="item" id="item5">Item5</li>
+        </ul>
+    </div>
+</body>
+</html>
