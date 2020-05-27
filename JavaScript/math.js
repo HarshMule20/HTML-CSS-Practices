@@ -1,0 +1,1 @@
+console.warn("This is practice for math objects in JS")
