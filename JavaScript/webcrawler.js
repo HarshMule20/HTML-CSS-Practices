@@ -1,5 +1,5 @@
 let string = "python"
-let links  = docuemnts.links;
+let links  = document.links;
 console.log(links);
 let href;
 Array.from(links).forEach(function(element){
