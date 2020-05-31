@@ -2,6 +2,7 @@ console.log("This is a note application created in javascript")
 displayNotes();
 let addbtn = document.getElementById("btn1");
 addbtn.addEventListener("click", function (e) {
+    let addtitle = document.getElementById("addtitle");
     let addtext = document.getElementById("addtext");
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -10,8 +11,13 @@ addbtn.addEventListener("click", function (e) {
     else {
         notesObj = JSON.parse(notes);
     }
-    notesObj.push(addtext.value);
+    newObj = {
+        title : addtitle.value,
+        text : addtext.value
+    }
+    notesObj.push(newObj);
     localStorage.setItem("notes", JSON.stringify(notesObj));
+    addtitle.value = ""
     addtext.value = ""
     console.log(notesObj);
     displayNotes();
@@ -29,8 +35,8 @@ function displayNotes() {
     notesObj.forEach(function (element, index) {
         display_data += `<div class="notecard mx-2 my-2 card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Note ${index + 1}</h5>
-            <p class="card-text">${element}</p>
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">${element.text}</p>
             <button type="button" id="${index}" onclick="deleteNotes(this.id)" class="btn btn-primary">Delete Note</button>
         </div>
     </div>`
