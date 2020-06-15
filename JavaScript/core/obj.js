@@ -14,3 +14,9 @@ const hobbies = ['Cricket', 'TableTennis', 'Coding', 'Surfing'];
 for (let hobby of hobbies){
     console.log("My hobbies are: ", hobby);
 }
+
+// to copy a array/list using the spread operator
+
+const newarr = [...hobbies];
+console.log("Actual Array:", hobbies);
+console.log("Copied array:", newarr);
