@@ -12,7 +12,7 @@ console.log("This is operation1: ", operate1(3,4));
 console.log("This is operation2: ", operate2(4,5));
 
 // When we have only one argument then the syntax removes the parenthesis from the statement.
-
+  
 const add = a => a + 1;
 
 console.log("With one argument: ", add(3));
